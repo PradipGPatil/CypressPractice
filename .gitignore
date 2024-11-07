@@ -1,5 +1,9 @@
 
-# Ignore everything
-*
+
 # do not ignore cypress
- !cypress/
+!cypress/
+#node mode no need to push as it will be availabe on git init done
+node_modules/
+
+#server will have default config no need to push
+cypress.config.js
