@@ -1,2 +1,5 @@
 
+# Ignore everything
+*
+# do not ignore cypress
  !cypress/
