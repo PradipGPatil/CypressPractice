@@ -12,12 +12,20 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 
-Cypress.Commands.add('getContainText',(text,expText)=>{
+Cypress.Commands.add('getContainText', (text, expText) => {
 
-    cy.contains(text).then((t)=>{
-        const innterText=t.text();
+    cy.contains(text).then((t) => {
+        const innterText = t.text();
         expect(innterText).to.be.eql(expText);
-       })
+    })
+})
+
+Cypress.Commands.add('loginApi', function () {
+    cy.request('POST', 'https://rahulshettyacademy.com/api/ecom/auth/login', { "userEmail": "pradippatil1543@gmail.com", "userPassword": "Test@1234" })
+    .then(function(response){
+        expect(response.status).to.be.eql(200);
+        Cypress.env('token',response.body.token);
+    })
 })
 
 //

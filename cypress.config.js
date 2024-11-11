@@ -1,4 +1,6 @@
 const { defineConfig } = require("cypress");
+const webpack = require('@cypress/webpack-preprocessor');
+const path = require('path');
 
 module.exports = defineConfig({
   e2e: {
@@ -6,4 +8,5 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  
 });
