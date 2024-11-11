@@ -1,0 +1,15 @@
+{
+  "name": "excelmanipulation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.15.2",
+    "exceljs": "^4.4.0"
+  }
+}
