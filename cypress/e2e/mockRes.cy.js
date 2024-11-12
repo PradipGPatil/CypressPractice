@@ -53,7 +53,8 @@ describe('mock response ', () => {
         })
     }).as('dummyUrl');
     reqElement.getVertialLiberaryBtn().click();
-    cy.wait('@dummyUrl')
+    cy.wait('@dummyUrl');
+    console.log("added test")
   })
 
 })
